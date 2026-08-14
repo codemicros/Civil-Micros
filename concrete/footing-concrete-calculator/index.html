@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Footing Concrete Calculator | Civil Micros</title>
+<meta content="Estimate concrete quantity for rectangular footings." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://civil.codemicros.com/concrete/footing-concrete-calculator/" rel="canonical"/>
+<meta content="Footing Concrete Calculator | Civil Micros" property="og:title"/>
+<meta content="Estimate concrete quantity for rectangular footings." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://civil.codemicros.com/concrete/footing-concrete-calculator/" property="og:url"/>
+<meta content="https://civil.codemicros.com/assets/img/logo.svg" property="og:image"/>
+<meta content="#eb7a11" name="theme-color"/>
+<link href="/assets/img/logo.svg" rel="icon" type="image/svg+xml"/>
+<link as="style" href="/assets/css/styles.css" rel="preload"/>
+<link href="/assets/css/styles.css" rel="stylesheet"/>
+<script type="application/ld+json">{
+      "@context":"https://schema.org",
+      "@type":"WebSite",
+      "name":"Civil Micros",
+      "url":"https://civil.codemicros.com/concrete/footing-concrete-calculator/",
+      "description":"Estimate concrete quantity for rectangular footings.",
+      "potentialAction":{"@type":"SearchAction","target":"https://civil.codemicros.com/calculators/?q={search_term_string}","query-input":"required name=search_term_string"}
+    }</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is this good for isolated footings?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for rectangular isolated footings it is useful."}}, {"@type": "Question", "name": "Should I add waste?", "acceptedAnswer": {"@type": "Answer", "text": "You can manually add 3\u20135% at site level if needed."}}]}</script>
+</head>
+<body>
+<div class="topbar">
+<div class="container">
+<ul>
+<li>✅ Accurate Calculations</li>
+<li>📱 Mobile Friendly</li>
+<li>🆓 100% Free</li>
+<li>👷 Built for Engineers</li>
+</ul>
+<div class="meta-links">
+<a href="https://play.google.com/store/apps/details?id=com.codemicros.civil" rel="noopener noreferrer" target="_blank">Download App</a>
+<a href="/resources/">Resources</a>
+<a href="/about.html">About Us</a>
+<a href="/contact.html">Contact Us</a>
+</div>
+</div>
+</div>
+<header class="header">
+<div class="container nav">
+<a class="brand" href="/">
+<img alt="Civil Micros logo" src="/assets/img/logo.svg"/>
+<div>
+<h1>Civil Micros</h1>
+<div class="tag">Civil Engineering &amp; Construction Tools</div>
+</div>
+</a>
+<nav class="nav-links"><a class="active" href="/calculators/">Calculators</a><a class="" href="/estimators/">Estimators</a><a class="" href="/formulas/">Formulas</a><a class="" href="/converters/">Converters</a><a class="" href="/guides/">Guides</a><a class="" href="/resources/">Resources</a></nav>
+<form class="search-inline" data-search-target="">
+<input aria-label="Search Civil Micros" placeholder="Search calculators, formulas, guides..." type="search"/>
+<button type="submit">Search</button>
+</form>
+</div>
+</header>
+<section class="page-hero"><div class="container"><div class="breadcrumbs">Home / Concrete / Footing Concrete Calculator</div><div class="hero-shell reveal" style="border-top:6px solid var(--category-concrete);"><div><h2>Footing Concrete Calculator</h2><p>Estimate concrete quantity for rectangular footings.</p><div class="tag-row"><span class="tag">Concrete</span><span class="tag">Tool page</span><span class="tag">Practical content</span></div></div><div class="mini-card"><div style="display:flex;align-items:center;gap:18px;"><img alt="Footing Concrete Calculator" class="tool-page-icon" src="/assets/tool-icons/concrete/footing-concrete-calculator.png"/><div><strong style="display:block;font-size:22px;">Footing Concrete Calculator</strong><span style="color:var(--muted);">Visual reference for this tool.</span></div></div></div></div></div></section>
+<section class="section" style="padding-top:0;">
+<div class="small-container">
+<div class="content-card reveal">
+<h3>Footing Concrete Calculator</h3>
+<p style="color:var(--muted);">Ideal for isolated footing estimation when size and count are known.</p>
+<div class="calc-box">
+<div class="form-grid"><div class="form-group"><label for="f_l">Length (m)</label><input id="f_l" step="any" type="number" value="1.8"/></div><div class="form-group"><label for="f_w">Width (m)</label><input id="f_w" step="any" type="number" value="1.8"/></div><div class="form-group"><label for="f_t">Thickness (m)</label><input id="f_t" step="any" type="number" value="0.45"/></div><div class="form-group"><label for="f_c">No. of Footings (nos)</label><input id="f_c" step="any" type="number" value="6"/></div></div>
+<div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;"><button id="calcBtn" type="button">Calculate</button><button class="button-outline" id="resetBtn" type="button">Reset</button></div>
+<div class="result-panel">
+<div class="result-grid">
+<div class="result-stat"><span>Result 1</span><strong id="o1">—</strong></div>
+<div class="result-stat"><span>Result 2</span><strong id="o2">—</strong></div>
+<div class="result-stat"><span>Result 3</span><strong id="o3">—</strong></div>
+<div class="result-stat"><span>Result 4</span><strong id="o4">—</strong></div>
+<div class="result-stat"><span>Result 5</span><strong id="o5">—</strong></div>
+<div class="result-stat"><span>Note</span><strong id="o6">—</strong></div>
+</div>
+<div class="helper-note">This calculator is built client-side and runs fully in the browser, which makes it suitable for GitHub Pages and other static hosting platforms.</div>
+</div>
+</div>
+<script>
+      (function(){
+        const defaults = {"f_l": "1.8", "f_w": "1.8", "f_t": "0.45", "f_c": "6"};
+        function n(id){ return parseFloat(document.getElementById(id).value)||0; }
+        function s(id){ return document.getElementById(id).value; }
+        function out(id,val){ document.getElementById(id).textContent = val; }
+        function calc(){ const l=n('f_l'), w=n('f_w'), t=n('f_t'), c=n('f_c'); const per=l*w*t; const total=per*c; out('o1', per.toFixed(3)+' m³'); out('o2', total.toFixed(3)+' m³'); out('o3', Math.round(total*6.3)+' bags'); out('o4', (total*0.44).toFixed(2)+' m³'); out('o5', (total*0.70).toFixed(2)+' m³'); out('o6','Rectangular footing assumption'); }
+        document.getElementById('calcBtn').addEventListener('click', calc);
+        document.getElementById('resetBtn').addEventListener('click', () => { Object.keys(defaults).forEach(k => document.getElementById(k).value = defaults[k]); calc(); });
+        calc();
+      })();
+      </script>
+</div>
+</div>
+</section>
+<section class="section" style="padding-top:0;"><div class="small-container two-col"><div class="content-card reveal"><h4>Formula</h4><div class="formula-box">Footing Volume = Length × Width × Thickness × Number of Footings</div><h4 style="margin-top:22px;">Worked Example</h4><p style="color:var(--muted);">A footing 1.8 m × 1.8 m × 0.45 m requires 1.458 m³.</p><div class="notice">For safety-critical structural design, always verify assumptions and consult a qualified engineer where required.</div></div><div class="stack"><div class="ad-slot reveal">Advertisement Area — add your AdSense unit here after replacing placeholder setup values.</div><div class="content-card reveal"><h4>Why this page is useful</h4><ul class="list"><li>Specific purpose page with clear intent</li><li>Visible formula and example for trust</li><li>Internal links to related tools</li><li>Clean layout for mobile users</li></ul></div></div></div></section>
+<section class="section" style="padding-top:0;"><div class="small-container"><div class="section-title reveal"><h3>Frequently Asked Questions</h3><p>Useful short answers to common questions about this topic.</p></div><div class="stack"><div class="faq-item reveal"><h5>Is this good for isolated footings?</h5><p style="margin:0;color:var(--muted);">Yes, for rectangular isolated footings it is useful.</p></div><div class="faq-item reveal"><h5>Should I add waste?</h5><p style="margin:0;color:var(--muted);">You can manually add 3–5% at site level if needed.</p></div></div></div></section>
+<section class="section" style="padding-top:0;"><div class="small-container"><div class="section-title reveal"><h3>Related Pages</h3><p>Continue to the next relevant tool or guide.</p></div><div class="related-grid"><div class="related-card reveal"><a href="/concrete/column-concrete-calculator/"><img alt="Column Concrete Calculator" class="related-thumb" loading="lazy" src="/assets/tool-icons/concrete/column-concrete-calculator.png"/></a><h4>Column Concrete Calculator</h4><p>Related page to continue your estimation workflow.</p><a href="/concrete/column-concrete-calculator/">Open page →</a></div><div class="related-card reveal"><a href="/concrete/concrete-volume-calculator/"><img alt="Concrete Volume Calculator" class="related-thumb" loading="lazy" src="/assets/tool-icons/concrete/concrete-volume-calculator.png"/></a><h4>Concrete Volume Calculator</h4><p>Related page to continue your estimation workflow.</p><a href="/concrete/concrete-volume-calculator/">Open page →</a></div><div class="related-card reveal"><a href="/estimators/concrete-cost-estimator/"><img alt="Concrete Cost Estimator" class="related-thumb" loading="lazy" src="/assets/tool-icons/estimators/concrete-cost-estimator.png"/></a><h4>Concrete Cost Estimator</h4><p>Related page to continue your estimation workflow.</p><a href="/estimators/concrete-cost-estimator/">Open page →</a></div></div></div></section>
+<footer class="footer">
+<div class="container footer-grid">
+<div>
+<div class="brand" style="margin-bottom:10px;">
+<img alt="Civil Micros" src="/assets/img/logo.svg"/>
+<div>
+<h2>Civil Micros</h2>
+<div class="tag">Civil engineering calculators, estimators &amp; construction tools.</div>
+</div>
+</div>
+<p>Use Civil Micros for practical civil engineering calculators, quantity estimators, formulas, converters, guides and resource pages built for site work, planning and study.</p>
+</div>
+<div>
+<h5>Popular Tools</h5>
+<ul>
+<li><a href="/concrete/concrete-volume-calculator/">Concrete Volume</a></li>
+<li><a href="/brickwork/brick-quantity-calculator/">Brick Quantity</a></li>
+<li><a href="/steel/steel-weight-calculator/">Steel Weight</a></li>
+<li><a href="/tiles/tile-quantity-calculator/">Tile Quantity</a></li>
+</ul>
+</div>
+<div>
+<h5>Explore</h5>
+<ul>
+<li><a href="/estimators/">Estimators</a></li>
+<li><a href="/formulas/">Formulas</a></li>
+<li><a href="/guides/">Guides</a></li>
+<li><a href="/converters/">Converters</a></li>
+</ul>
+</div>
+<div>
+<h5>Policies</h5>
+<ul>
+<li><a href="/about.html">About</a></li>
+<li><a href="/contact.html">Contact</a></li>
+<li><a href="/privacy.html">Privacy Policy</a></li>
+<li><a href="/disclaimer.html">Disclaimer</a></li>
+</ul>
+</div>
+</div>
+<div class="container" style="padding-top:18px;color:var(--muted);">© <span data-year=""></span> Civil Micros. All rights reserved.</div>
+</footer>
+<script defer="" src="/assets/js/main.js"></script>
+</body>
+</html>

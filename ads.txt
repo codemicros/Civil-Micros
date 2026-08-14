@@ -1,0 +1,2 @@
+# Add your approved AdSense publisher line here after you receive the real publisher ID.
+# Example format: google.com, pub-YOUR_PUBLISHER_ID, DIRECT, f08c47fec0942fa0

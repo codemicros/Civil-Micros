@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Screed Calculator | Civil Micros</title>
+<meta content="Estimate screed volume and material quantity." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://civil.codemicros.com/flooring/screed-calculator/" rel="canonical"/>
+<meta content="Screed Calculator | Civil Micros" property="og:title"/>
+<meta content="Estimate screed volume and material quantity." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://civil.codemicros.com/flooring/screed-calculator/" property="og:url"/>
+<meta content="https://civil.codemicros.com/assets/img/logo.svg" property="og:image"/>
+<meta content="#eb7a11" name="theme-color"/>
+<link href="/assets/img/logo.svg" rel="icon" type="image/svg+xml"/>
+<link as="style" href="/assets/css/styles.css" rel="preload"/>
+<link href="/assets/css/styles.css" rel="stylesheet"/>
+<script type="application/ld+json">{
+      "@context":"https://schema.org",
+      "@type":"WebSite",
+      "name":"Civil Micros",
+      "url":"https://civil.codemicros.com/flooring/screed-calculator/",
+      "description":"Estimate screed volume and material quantity.",
+      "potentialAction":{"@type":"SearchAction","target":"https://civil.codemicros.com/calculators/?q={search_term_string}","query-input":"required name=search_term_string"}
+    }</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is screed same as concrete?", "acceptedAnswer": {"@type": "Answer", "text": "No, screed is generally richer and finer than structural concrete."}}, {"@type": "Question", "name": "Can I use different mix ratios?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, update the sand part value."}}]}</script>
+</head>
+<body>
+<div class="topbar">
+<div class="container">
+<ul>
+<li>✅ Accurate Calculations</li>
+<li>📱 Mobile Friendly</li>
+<li>🆓 100% Free</li>
+<li>👷 Built for Engineers</li>
+</ul>
+<div class="meta-links">
+<a href="https://play.google.com/store/apps/details?id=com.codemicros.civil" rel="noopener noreferrer" target="_blank">Download App</a>
+<a href="/resources/">Resources</a>
+<a href="/about.html">About Us</a>
+<a href="/contact.html">Contact Us</a>
+</div>
+</div>
+</div>
+<header class="header">
+<div class="container nav">
+<a class="brand" href="/">
+<img alt="Civil Micros logo" src="/assets/img/logo.svg"/>
+<div>
+<h1>Civil Micros</h1>
+<div class="tag">Civil Engineering &amp; Construction Tools</div>
+</div>
+</a>
+<nav class="nav-links"><a class="active" href="/calculators/">Calculators</a><a class="" href="/estimators/">Estimators</a><a class="" href="/formulas/">Formulas</a><a class="" href="/converters/">Converters</a><a class="" href="/guides/">Guides</a><a class="" href="/resources/">Resources</a></nav>
+<form class="search-inline" data-search-target="">
+<input aria-label="Search Civil Micros" placeholder="Search calculators, formulas, guides..." type="search"/>
+<button type="submit">Search</button>
+</form>
+</div>
+</header>
+<section class="page-hero"><div class="container"><div class="breadcrumbs">Home / Flooring / Screed Calculator</div><div class="hero-shell reveal" style="border-top:6px solid var(--category-flooring);"><div><h2>Screed Calculator</h2><p>Estimate screed volume and material quantity.</p><div class="tag-row"><span class="tag">Flooring</span><span class="tag">Tool page</span><span class="tag">Practical content</span></div></div><div class="mini-card"><div style="display:flex;align-items:center;gap:18px;"><img alt="Screed Calculator" class="tool-page-icon" src="/assets/tool-icons/flooring/screed-calculator.png"/><div><strong style="display:block;font-size:22px;">Screed Calculator</strong><span style="color:var(--muted);">Visual reference for this tool.</span></div></div></div></div></div></section>
+<section class="section" style="padding-top:0;">
+<div class="small-container">
+<div class="content-card reveal">
+<h3>Screed Calculator</h3>
+<p style="color:var(--muted);">Use this tool for floor screeds, leveling layers and topping work.</p>
+<div class="calc-box">
+<div class="form-grid"><div class="form-group"><label for="sc_l">Length (m)</label><input id="sc_l" step="any" type="number" value="10"/></div><div class="form-group"><label for="sc_w">Width (m)</label><input id="sc_w" step="any" type="number" value="8"/></div><div class="form-group"><label for="sc_t">Thickness (m)</label><input id="sc_t" step="any" type="number" value="0.05"/></div><div class="form-group"><label for="sc_s">Sand Part (part)</label><input id="sc_s" step="any" type="number" value="4"/></div></div>
+<div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;"><button id="calcBtn" type="button">Calculate</button><button class="button-outline" id="resetBtn" type="button">Reset</button></div>
+<div class="result-panel">
+<div class="result-grid">
+<div class="result-stat"><span>Result 1</span><strong id="o1">—</strong></div>
+<div class="result-stat"><span>Result 2</span><strong id="o2">—</strong></div>
+<div class="result-stat"><span>Result 3</span><strong id="o3">—</strong></div>
+<div class="result-stat"><span>Result 4</span><strong id="o4">—</strong></div>
+<div class="result-stat"><span>Result 5</span><strong id="o5">—</strong></div>
+<div class="result-stat"><span>Note</span><strong id="o6">—</strong></div>
+</div>
+<div class="helper-note">This calculator is built client-side and runs fully in the browser, which makes it suitable for GitHub Pages and other static hosting platforms.</div>
+</div>
+</div>
+<script>
+      (function(){
+        const defaults = {"sc_l": "10", "sc_w": "8", "sc_t": "0.05", "sc_s": "4"};
+        function n(id){ return parseFloat(document.getElementById(id).value)||0; }
+        function s(id){ return document.getElementById(id).value; }
+        function out(id,val){ document.getElementById(id).textContent = val; }
+        function calc(){ const l=n('sc_l'), w=n('sc_w'), t=n('sc_t'), s=n('sc_s'); const wet=l*w*t; const dry=wet*1.33; const cem=dry*(1/(1+s)); const sand=dry*(s/(1+s)); const bags=cem*1440/50; out('o1', wet.toFixed(2)+' m³'); out('o2', dry.toFixed(2)+' m³'); out('o3', Math.round(bags)+' bags'); out('o4', sand.toFixed(2)+' m³'); out('o5', (l*w).toFixed(2)+' m²'); out('o6','Screed volume'); }
+        document.getElementById('calcBtn').addEventListener('click', calc);
+        document.getElementById('resetBtn').addEventListener('click', () => { Object.keys(defaults).forEach(k => document.getElementById(k).value = defaults[k]); calc(); });
+        calc();
+      })();
+      </script>
+</div>
+</div>
+</section>
+<section class="section" style="padding-top:0;"><div class="small-container two-col"><div class="content-card reveal"><h4>Formula</h4><div class="formula-box">Screed Volume = Length × Width × Thickness</div><h4 style="margin-top:22px;">Worked Example</h4><p style="color:var(--muted);">A 10 m × 8 m floor with 50 mm screed thickness needs 4.00 m³ wet screed.</p><div class="notice">For safety-critical structural design, always verify assumptions and consult a qualified engineer where required.</div></div><div class="stack"><div class="ad-slot reveal">Advertisement Area — add your AdSense unit here after replacing placeholder setup values.</div><div class="content-card reveal"><h4>Why this page is useful</h4><ul class="list"><li>Specific purpose page with clear intent</li><li>Visible formula and example for trust</li><li>Internal links to related tools</li><li>Clean layout for mobile users</li></ul></div></div></div></section>
+<section class="section" style="padding-top:0;"><div class="small-container"><div class="section-title reveal"><h3>Frequently Asked Questions</h3><p>Useful short answers to common questions about this topic.</p></div><div class="stack"><div class="faq-item reveal"><h5>Is screed same as concrete?</h5><p style="margin:0;color:var(--muted);">No, screed is generally richer and finer than structural concrete.</p></div><div class="faq-item reveal"><h5>Can I use different mix ratios?</h5><p style="margin:0;color:var(--muted);">Yes, update the sand part value.</p></div></div></div></section>
+<section class="section" style="padding-top:0;"><div class="small-container"><div class="section-title reveal"><h3>Related Pages</h3><p>Continue to the next relevant tool or guide.</p></div><div class="related-grid"><div class="related-card reveal"><a href="/flooring/floor-area-calculator/"><img alt="Floor Area Calculator" class="related-thumb" loading="lazy" src="/assets/tool-icons/flooring/floor-area-calculator.png"/></a><h4>Floor Area Calculator</h4><p>Related page to continue your estimation workflow.</p><a href="/flooring/floor-area-calculator/">Open page →</a></div><div class="related-card reveal"><a href="/concrete/slab-concrete-calculator/"><img alt="Slab Concrete Calculator" class="related-thumb" loading="lazy" src="/assets/tool-icons/concrete/slab-concrete-calculator.png"/></a><h4>Slab Concrete Calculator</h4><p>Related page to continue your estimation workflow.</p><a href="/concrete/slab-concrete-calculator/">Open page →</a></div><div class="related-card reveal"><a href="/estimators/flooring-cost-estimator/"><img alt="Flooring Cost Estimator" class="related-thumb" loading="lazy" src="/assets/tool-icons/estimators/flooring-cost-estimator.png"/></a><h4>Flooring Cost Estimator</h4><p>Related page to continue your estimation workflow.</p><a href="/estimators/flooring-cost-estimator/">Open page →</a></div></div></div></section>
+<footer class="footer">
+<div class="container footer-grid">
+<div>
+<div class="brand" style="margin-bottom:10px;">
+<img alt="Civil Micros" src="/assets/img/logo.svg"/>
+<div>
+<h2>Civil Micros</h2>
+<div class="tag">Civil engineering calculators, estimators &amp; construction tools.</div>
+</div>
+</div>
+<p>Use Civil Micros for practical civil engineering calculators, quantity estimators, formulas, converters, guides and resource pages built for site work, planning and study.</p>
+</div>
+<div>
+<h5>Popular Tools</h5>
+<ul>
+<li><a href="/concrete/concrete-volume-calculator/">Concrete Volume</a></li>
+<li><a href="/brickwork/brick-quantity-calculator/">Brick Quantity</a></li>
+<li><a href="/steel/steel-weight-calculator/">Steel Weight</a></li>
+<li><a href="/tiles/tile-quantity-calculator/">Tile Quantity</a></li>
+</ul>
+</div>
+<div>
+<h5>Explore</h5>
+<ul>
+<li><a href="/estimators/">Estimators</a></li>
+<li><a href="/formulas/">Formulas</a></li>
+<li><a href="/guides/">Guides</a></li>
+<li><a href="/converters/">Converters</a></li>
+</ul>
+</div>
+<div>
+<h5>Policies</h5>
+<ul>
+<li><a href="/about.html">About</a></li>
+<li><a href="/contact.html">Contact</a></li>
+<li><a href="/privacy.html">Privacy Policy</a></li>
+<li><a href="/disclaimer.html">Disclaimer</a></li>
+</ul>
+</div>
+</div>
+<div class="container" style="padding-top:18px;color:var(--muted);">© <span data-year=""></span> Civil Micros. All rights reserved.</div>
+</footer>
+<script defer="" src="/assets/js/main.js"></script>
+</body>
+</html>
