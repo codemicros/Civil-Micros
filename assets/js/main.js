@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+  const adObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
+        adObserver.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '300px 0px' });
+  document.querySelectorAll('ins.adsbygoogle').forEach(el => adObserver.observe(el));
+
   document.querySelectorAll('[data-search-target]').forEach(form => {
     form.addEventListener('submit', e => {
       e.preventDefault();
