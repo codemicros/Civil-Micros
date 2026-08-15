@@ -226,6 +226,8 @@ button:hover, .button:hover { background:var(--primary-dark); }
 .related-card h4 { margin:0 0 8px; }
 .related-card p { margin:0 0 12px; color:var(--muted); }
 .ad-slot { border:2px dashed #dadada; background:#fcfcfc; color:#8c9098; text-align:center; border-radius:16px; padding:18px; font-weight:800; }
+.ad-unit { border:1px solid var(--line); border-radius:16px; background:#fcfcfc; padding:16px; text-align:center; overflow:hidden; min-height:60px; }
+.ad-unit-label { display:block; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
 .notice { border-left:4px solid var(--primary); background:#fff8f1; padding:14px 16px; border-radius:12px; color:#6c5843; }
 .table-wrap { overflow:auto; }
 .table { width:100%; border-collapse:collapse; }
