@@ -294,6 +294,7 @@ button:hover, .button:hover { background:var(--primary-dark); }
 .store-icon { width:28px; height:28px; flex:0 0 28px; }
 .store-button small { display:block; font-size:9px; letter-spacing:.08em; line-height:1.1; }
 .store-button strong { display:block; font-size:19px; line-height:1.15; }
+.app-policy-link { margin:12px 0 0; font-weight:800; color:var(--primary); }
 .app-promo-visual { display:flex; justify-content:center; align-items:center; min-height:420px; }
 .app-promo-visual img { width:min(260px,100%); border-radius:22px; box-shadow:0 18px 40px rgba(0,0,0,.16); border:1px solid var(--line); }
 .app-gallery-wrap { border-top:1px solid var(--line); padding:24px 26px 28px; background:#fafafa; }
@@ -313,4 +314,10 @@ button:hover, .button:hover { background:var(--primary-dark); }
 .tool-card-image img { width:100%; height:100%; object-fit:contain; padding:13px; }
 .tool-page-icon { width:150px !important; height:150px !important; object-fit:contain; flex:0 0 auto; background:transparent !important; }
 .related-thumb { width:100%; height:128px; object-fit:contain; border-radius:12px; background:#fff; border:1px solid var(--line); margin-bottom:12px; padding:8px; }
+.policy-content { color:var(--muted); }
+.policy-content h2, .policy-content h3 { color:var(--text); }
+.policy-content h2 { margin-bottom:8px; }
+.policy-content h3 { margin-top:28px; margin-bottom:8px; }
+.policy-content a { color:var(--primary); font-weight:800; overflow-wrap:anywhere; }
+.policy-content ul { padding-left:22px; }
 @media (max-width:760px){ .tool-card-image{height:158px;} .tool-page-icon{width:120px !important;height:120px !important;} }
