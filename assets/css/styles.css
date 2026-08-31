@@ -276,7 +276,7 @@ button:hover, .button:hover { background:var(--primary-dark); }
 .cta-banner { background:var(--primary); }
 
 
-/* Google Play app showcase */
+/* Mobile app showcase */
 .app-showcase { margin-top:34px; border:1px solid var(--line); border-radius:24px; overflow:hidden; background:#fff; }
 .app-showcase-main { display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:center; padding:32px; background:#fff; }
 .app-copy { max-width:720px; }
@@ -289,11 +289,11 @@ button:hover, .button:hover { background:var(--primary-dark); }
 .app-feature-pills { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:22px; }
 .app-feature-pills span { border:1px solid #ead6c4; background:#fff8f1; color:#6e4a2f; padding:8px 12px; border-radius:999px; font-size:14px; font-weight:800; }
 .app-actions { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-.play-store-button { display:inline-flex; align-items:center; gap:11px; background:#151515; color:#fff; padding:10px 16px; border-radius:12px; min-width:190px; }
-.play-store-button:hover { transform:translateY(-1px); }
-.play-triangle { font-size:26px; line-height:1; }
-.play-store-button small { display:block; font-size:9px; letter-spacing:.08em; line-height:1.1; }
-.play-store-button strong { display:block; font-size:19px; line-height:1.15; }
+.store-button { display:inline-flex; align-items:center; gap:11px; background:#151515; color:#fff; padding:10px 16px; border-radius:12px; min-width:190px; transition:transform .18s ease, box-shadow .18s ease; }
+.store-button:hover { transform:translateY(-1px); box-shadow:0 10px 22px rgba(0,0,0,.14); }
+.store-icon { width:28px; height:28px; flex:0 0 28px; }
+.store-button small { display:block; font-size:9px; letter-spacing:.08em; line-height:1.1; }
+.store-button strong { display:block; font-size:19px; line-height:1.15; }
 .app-promo-visual { display:flex; justify-content:center; align-items:center; min-height:420px; }
 .app-promo-visual img { width:min(260px,100%); border-radius:22px; box-shadow:0 18px 40px rgba(0,0,0,.16); border:1px solid var(--line); }
 .app-gallery-wrap { border-top:1px solid var(--line); padding:24px 26px 28px; background:#fafafa; }
